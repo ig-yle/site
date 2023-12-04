@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="Icon" href="images/ICON.png">
+    <title>PROPERTIES</title>
+</head>
+
+<body>
+<header>
+    <div class="header-content">
+        <a href="MAIN.html"><img src="images/POLYMOSIA.png" id="POLY" alt="POLYMOSIA"></a>
+        <div class="header-icons">
+            <a href="MAIN.html"><img src="icons/house.png">HOME</a>
+            <a href="gallery.html"><img src="icons/town.png"> PROPERTIES </a>
+            <a href="gallery.html"><img src="icons/loan.png"> INVESTMENTS </a>
+            <a href="account.html"><img src="icons/user.png" alt="Account"> ACCOUNT</a>
+            <a href="aboutus.html"><img src="icons/group.png"> ABOUT US</a>
+        </div>
+        <div class="container" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+    </div>
+    <nav id="sideMenu">
+        <div class="exit-text" onclick="toggleMenu()">CLOSE</div>
+        <ul>
+            <li><a href="MAIN.html">HOME</a></li>
+            <li><a href="gallery.html"><img src="icons/town.png">PROPERTIES</a></li>
+            <li><a href="gallery.html"><img src="icons/loan.png">INVESTMENTS</a></li>
+            <li><a href="account.html"><img src="icons/user.png">ACCOUNT</a></li>
+            <li class="has-submenu">
+            <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+</header>
+    <div class="portfolio">
+        <b> Project Portfolio </b>
+        <p>Polymosia, as a pioneering property and investment company, has a rich history of delivering exceptional projects that redefine the real estate landscape. Since 1990, Polymosia has been committed to creating valuable and versatile properties, offering unique investment opportunities that go beyond the ordinary. Explore our diverse portfolio and discover a world of possibilities with Polymosia.</p>
+</div>
+
+<a href="residential.html">
+<div class="R">
+    <b>RESIDENTIAL</b>
+    <p>Polymosia is dedicated to crafting residential communities that elevate everyday living. Our mission is to enhance the quality of life through signature exclusivity and sophistication. Each residential property, from condominiums to horizontals and subdivisions, reflects our commitment to luxury and convenience, setting a standard of living only a select few can attain: the Polymosia Lifestyle.</p>
+</div>
+</a>
+
+<a href="residential-rfm.html">
+<div class="RRFM">
+    <b>RESIDENTIAL | READY FOR MOVE-IN</b>
+    <p>Embark on the Polymosia Promise by exploring our ready-for-move-in residential developments. Discover a home tailored to meet the needs of you and your family in prime locations such as Polymosia Center Florence, Tuscany, and other select neighborhoods within the charming city.</p>
+</div>
+</a>
+
+<a href="community.html">
+<div class="PCom">
+    <b>POLYMOSIA COMMUNITIES</b>
+    <p>Building on the success of our flagship development, Polymosia envisions creating communities that seamlessly integrate residential, office, and lifestyle properties. Following the model of our Florence community, we're extending our vision to new horizons. The captivating cityscape of Florence is the canvas for our second community, with plans to bring the Polymosia experience to select locations across Italy.</p>
+</div>
+</a>
+
+<a href="subdivision.html">
+<div class="PSub">
+    <b>POLYMOSIA SUBDIVISIONS</b>
+    <p>Adding to our diverse portfolio, Polymosia is proud to introduce meticulously planned subdivisions in and around Florence. These subdivisions offer a unique blend of tranquility and modern living, providing residents with an idyllic haven in the heart of Tuscany. </p>
+</div>
+</a>
+
+<a href="officenretail.html">
+<div class="OAR">
+    <b>OFFICE AND RETAIL</b>
+    <p>Polymosia's commitment extends to creating spaces for work and play that exude luxury and comfort. Our mastery of retail design is showcased in prime locations, including our upscale shopping and dining complex at the heart of Polymosia Center Florence.</p>
+    <p>From 8 Polymosia to the Polymosia Business Centers in strategic areas throughout Florence, our office spaces are designed for productivity. Curated retail offerings integrated into our properties provide residents and tenants with spaces to unwind amidst the beauty of the Italian landscape.</p>
+</div>
+</a>
+
+<a href="hotel.html">
+<div class="HL">
+    <b>HOTEL AND LEISURE</b>
+    <p>Responding to the demand for the Polymosia standard of living, we've expanded into Polymosia Hotels and Leisure Management Corporation. As a wholly-owned subsidiary, we're poised to develop a premium line of hotels, serviced apartments, and leisure clubs, adding an extra layer of sophistication to the vibrant city of Florence and beyond. Get ready to experience luxury in every aspect of life with Polymosia.</p>
+</div>
+</a>
+
+<footer>
+    <ul id="Corporate">
+        <li><a href="corporate.html">Corporate</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+    </ul>
+    <img src="images/TLLC.png" id="Parent" alt="TLLC">
+    <br><br>
+    Timoteo Empire Tower, Manhattan, NY 10001
+    <br><br>
+    All Rights Reserved | © 2023 CLYDE TIMOTEO
+
+    <div id="address">
+        
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+var welcomeDialog = document.getElementById('welcomeDialog');
+welcomeDialog.showModal();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+        if (link.href) {
+            link.addEventListener('click', function() {
+                link.classList.add('visited');
+            });
+        }
+    });
+});
+
+// Remove the "change" class by default
+var container = document.querySelector('.container');
+container.classList.remove('default');
+});
+
+function closeWelcomeDialog() {
+    var welcomeDialog = document.getElementById('welcomeDialog');
+    welcomeDialog.close();
+}
+
+function toggleMenu() {
+    var container = document.querySelector('.container');
+    var sideMenu = document.getElementById('sideMenu');
+
+    container.classList.toggle("change");
+
+    if (container.classList.contains("change")) {
+        sideMenu.style.right = "0";
+    } else {
+        sideMenu.style.right = "-250%";
+    }
+}
+</script>
+
+</body>

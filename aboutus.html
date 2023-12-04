@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="Icon" href="images/ICON.png">
+    <title>ABOUT US</title>
+</head>
+
+<body>
+<header>
+    <div class="header-content">
+        <a href="MAIN.html"><img src="images/POLYMOSIA.png" id="POLY" alt="POLYMOSIA"></a>
+        <div class="header-icons">
+            <a href="MAIN.html"><img src="icons/house.png">HOME</a>
+            <a href="gallery.html"><img src="icons/town.png"> PROPERTIES </a>
+            <a href="gallery.html"><img src="icons/loan.png"> INVESTMENTS </a>
+            <a href="account.html"><img src="icons/user.png" alt="Account"> ACCOUNT</a>
+            <a href="aboutus.html"><img src="icons/group.png"> ABOUT US</a>
+        </div>
+        <div class="container" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        
+    </div>
+    <nav id="sideMenu">
+        <div class="exit-text" onclick="toggleMenu()">CLOSE</div>
+        <ul>
+            <li><a href="MAIN.html">HOME</a></li>
+            <li><a href="gallery.html"><img src="icons/town.png">PROPERTIES</a></li>
+            <li><a href="gallery.html"><img src="icons/loan.png">INVESTMENTS</a></li>
+            <li><a href="gallery.html"><img src="icons/internet.png">PORTAL</a></li>
+            <li><a href="account.html"><img src="icons/user.png">ACCOUNT</a></li>
+            <li class="has-submenu">
+            <li><a href="About%20Us.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="ABOUT">
+    <b>ABOUT US</b>
+</div>
+
+<div id="PEPI">
+    Pioneering Excellence in Property and Investments
+    <br>
+    <b>Decades of Distinction</b>
+       <p>Polymosia emerged as a trailblazer in the realm of property and investments, grounded in a legacy of excellence that dates back to 1990. Our journey began with a commitment to redefine living spaces and investment landscapes, setting new benchmarks for quality, innovation, and exclusivity.</p>
+</div>
+
+<div id="OD">
+    <p>Polymosia distinguishes itself through a dynamic legacy characterized by forward-thinking strategies and a dedication to unparalleled service. Over the years, we have cultivated a reputation for delivering exceptional projects that seamlessly blend functionality, aesthetics, and sustainability.</p>
+    <br>
+    <b>Our Distinction</b>
+</div>
+
+<div id="OJ">
+    <b>Our Journey</b>
+    <p>Our journey is marked by the successful development of [number of projects] distinctive properties. From residential havens to commercial landmarks, each venture reflects our dedication to creating spaces that enhance the quality of life and leave a lasting imprint on the communities we serve.</p>
+</div>
+
+<div id="DH">
+    <p>In 1990, Polymosia ventured into new territories with the establishment of Polymosia S.R.L., dedicated to providing premium living experiences at affordable rates. This venture upholds the same commitment to innovation, customer-centric solutions, and lasting property values, leveraging the expertise, management, and visionary approach that define Polymosia.</p>
+    <br>
+    <b>Diversifying Horizons</b>
+</div>
+
+<footer>
+    <ul id="Corporate">
+        <li><a href="corporate.html">Corporate</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+    </ul>
+    <img src="images/TLLC.png" id="Parent" alt="TLLC">
+    <br><br>
+    Timoteo Empire Tower, Manhattan, NY 10001
+    <br><br>
+    All Rights Reserved | © 2023 CLYDE TIMOTEO
+
+    <div id="address">
+        
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+var welcomeDialog = document.getElementById('welcomeDialog');
+welcomeDialog.showModal();
+
+// Remove the "change" class by default
+var container = document.querySelector('.container');
+container.classList.remove('default');
+});
+
+function closeWelcomeDialog() {
+    var welcomeDialog = document.getElementById('welcomeDialog');
+    welcomeDialog.close();
+}
+
+function toggleMenu() {
+    var container = document.querySelector('.container');
+    var sideMenu = document.getElementById('sideMenu');
+
+    container.classList.toggle("change");
+
+    if (container.classList.contains("change")) {
+        sideMenu.style.right = "0";
+    } else {
+        sideMenu.style.right = "-250%";
+    }
+}
+</script>
+</body>

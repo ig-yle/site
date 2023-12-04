@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="Icon" href="images/ICON.png">
+    <title>POLYMOSIA</title>
+</head>
+
+<body class="main">
+    <header>
+        <dialog id="welcomeDialog">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+            <i class="fas fa-times exit-icon" onclick="closeWelcomeDialog()"></i>
+            <h2><b>Find Your Home at Polymosia</b></h2>
+            Explore Your Dream Home With Us!<br><br>
+            <p>To schedule a private appointment and view our model, residences and Investments, please call or email. 
+                <br><br>From Studio to Condominiums in the heart of Italia.</p>
+            <p>sales@polymosia.com <br> investments@polymosia.com <br> +39 123-4567-890</p>
+            <div class="fill">
+                <input type="text" placeholder="First Name*" name="firstname" required>
+                <input type="text" placeholder="Last Name*" name="lastname" required>
+                <input type="text" placeholder="E-mail Address*" name="email" required>
+                <input type="text" placeholder="Zip Code*" name="Code" required>
+                <br>
+                <input type="text" placeholder="Phone*" name="phone" required>
+                <input type="text" placeholder="Residence Size*" name="rsize" required>
+                <input type="text" placeholder="Residence Type*" name="rtype" required>
+                <input type="text" placeholder="How did you hear about us?*" name="???" required>
+                <input type="text" placeholder="Price*" name="price" required>
+                    <label> Do you currently: </label>
+                    <div class="checkbox">
+                    <input type="checkbox" id="own" name="own"> <label for="own"> Own</label><br>
+                    <input type="checkbox" id="rent" name="rent"> <label for="rent"> Rent</label><br>
+                    </div>
+                    <br>
+                    <label> Are you a broker? </label>
+                    <div class="checkbox">
+                    <input type="checkbox" id="yes" name="yes">
+                    <label for="yes"> Yes </label><br>
+                    <input type="checkbox" id="no" name="no">
+                    <label for="no"> Rent</label><br>
+                    </div>
+                    <br>
+                    <input type="text" placeholder="Your Message" name="message" required id="message">
+            </div>
+            <p id="RF"> *Requested fields </p>
+            
+            <button onclick="closeWelcomeDialog()">SEND</button>
+        </dialog>
+
+        <div class="header-content">
+            <a href="MAIN.html"><img src="images/POLYMOSIA.png" id="POLY" alt="POLYMOSIA"></a>
+            <div class="header-icons">
+                <a href="MAIN.html"><img src="icons/house.png">HOME</a>
+                <a href="gallery.html"><img src="icons/town.png"> PROPERTIES </a>
+                <a href="gallery.html"><img src="icons/loan.png"> INVESTMENTS </a>
+                <a href="account.html"><img src="icons/user.png" alt="Account"> ACCOUNT</a>
+                <a href="aboutus.html"><img src="icons/group.png"> ABOUT US</a>
+            </div>
+            <div class="container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            
+        </div>
+        <nav id="sideMenu">
+            <div class="exit-text" onclick="toggleMenu()">CLOSE</div>
+            <ul>
+                <li><a href="MAIN.html">HOME</a></li>
+                <li><a href="gallery.html"><img src="icons/town.png">PROPERTIES</a></li>
+                <li><a href="gallery.html"><img src="icons/loan.png">INVESTMENTS</a></li>
+                <li><a href="gallery.html"><img src="icons/internet.png">PORTAL</a></li>
+                <li><a href="account.html"><img src="icons/user.png">ACCOUNT</a></li>
+                <li class="has-submenu">
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="video" style="position: relative;">
+        <video playsinline autoplay loop muted style="width: 100%; height:100%">
+          <source src="videos/Italia.mp4" type="video/mp4">
+        </video>
+        <div class="summary" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+          Unlock Opportunities, Shape Tomorrow — Welcome to Polymosia, Your Real Estate & Investment Companion.
+        </div>
+      </div>
+    
+
+    <div id="second">
+        
+    </div>
+
+    <section class="third">
+        <img src="images/condo.jpg">
+        <h1>Adaptable, Timeless, Refined</h1>
+        <p> Enter a timeless realm of refined living, where adaptability meets enduring elegance.</p>
+    </section>
+
+    <section class="A">
+        <img src="">
+    </section>
+
+    <footer>
+            <ul id="Corporate">
+                <li><a href="corporate.html">Corporate</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+            </ul>
+            <img src="images/TLLC.png" id="Parent" alt="TLLC">
+            <br><br>
+            Timoteo Empire Tower, Manhattan, NY 10001
+            <br><br>
+            All Rights Reserved | © 2023 CLYDE TIMOTEO
+
+            <div id="address">
+                
+            </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var container = document.querySelector('.container');
+
+    // Remove the "change" class by default
+    container.classList.remove('default');
+
+    // Check if the window width is greater than 767 pixels
+    if (window.innerWidth <= 767) {
+        var welcomeDialog = document.getElementById('welcomeDialog');
+        welcomeDialog.showModal();
+    }
+});
+
+function closeWelcomeDialog() {
+    var welcomeDialog = document.getElementById('welcomeDialog');
+    welcomeDialog.close();
+}
+
+function toggleMenu() {
+    var container = document.querySelector('.container');
+    var sideMenu = document.getElementById('sideMenu');
+
+    container.classList.toggle("change");
+
+    if (container.classList.contains("change")) {
+        if (window.innerWidth <= 767) {
+            sideMenu.style.right = "0";
+        }
+    } else {
+        sideMenu.style.right = "-100%";
+    }
+}
+
+// Add event listener for window resize to handle the side menu behavior
+window.addEventListener('resize', function () {
+    var container = document.querySelector('.container');
+    var sideMenu = document.getElementById('sideMenu');
+
+    if (window.innerWidth > 767) {
+        container.classList.remove("change");
+        sideMenu.style.right = "-100%";
+    }
+});
+    </script>
+</body>
+
+</html>

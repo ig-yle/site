@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="Icon" href="images/ICON.png">
+        <title> TERMS AND CONDITIONS </title>
+        
+    </head>
+
+    <header>
+        <div class="header-content">
+            <a href="MAIN.html"><img src="images/POLYMOSIA.png" id="POLY" alt="POLYMOSIA"></a>
+            <div class="header-icons">
+                <a href="MAIN.html"><img src="icons/house.png">HOME</a>
+                <a href="gallery.html"><img src="icons/town.png"> PROPERTIES </a>
+                <a href="gallery.html"><img src="icons/loan.png"> INVESTMENTS </a>
+                <a href="account.html"><img src="icons/user.png" alt="Account"> ACCOUNT</a>
+                <a href="aboutus.html"><img src="icons/group.png"> ABOUT US</a>
+            </div>
+            <div class="container" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            
+        </div>
+        <nav id="sideMenu">
+            <div class="exit-text" onclick="toggleMenu()">CLOSE</div>
+            <ul>
+                <li><a href="MAIN.html">HOME</a></li>
+                <li><a href="gallery.html"><img src="icons/town.png">PROPERTIES</a></li>
+                <li><a href="gallery.html"><img src="icons/loan.png">INVESTMENTS</a></li>
+                <li><a href="gallery.html"><img src="icons/internet.png">PORTAL</a></li>
+                <li><a href="account.html"><img src="icons/user.png">ACCOUNT</a></li>
+                <li class="has-submenu">
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <section class="terms">
+        <img src="images/B-POLYMOSIA.png" id="PT"><hr>
+        <h2> Terms of Service </h2><br>
+        <b> Effective Date: December 1, 2023 </b>
+        <br><br>
+        Welcome to Polymosia. By using our website, you agree to comply with and be bound by the following Terms of Use. If you do not agree with these terms, please do not use our website.
+        <br><br>
+        
+        <b> 1. Acceptance of Terms </b>
+        <br><br>
+        By accessing or using our website, you agree to these Terms of Use and all applicable laws and regulations.
+        <br> <br>
+        
+        <b> 2. Use License <br><br> </b>
+        Permission is granted to temporarily download one copy of the materials on Polymosia's website for personal, non-commercial transitory viewing only.
+        <br><br>
+        This is the grant of a license, not a transfer of title.
+        <br><br>
+        
+        <b>3. User Responsibilities:</b><br><br>
+        You agree to provide accurate and complete information when using our website.<br><br>
+        You are responsible for maintaining the confidentiality of any account information.<br><br>
+        
+        <b>4. Intellectual Property:</b><br><br>
+        All content on the website is the property of Polymosia and is protected by copyright and other intellectual property laws.<br><br>
+        You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information obtained from the website.<br><br>
+       
+        <b>5. Prohibited Uses:</b><br><br>
+        You are prohibited from using the website for any unlawful purpose or in a way that could damage the reputation of Polymosia.<br><br>
+        You may not engage in any activity that interferes with the proper working of the website.<br><br>
+        
+        <b>6. Limitations:</b><br><br>
+        In no event shall Polymosia or its suppliers be liable for any damages arising out of the use or inability to use the materials on Polymosia's website.<br><br>
+        
+        <b>7. Governing Law:</b><br><br>
+        These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction].<br><br>
+        Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in [Your Jurisdiction].<br><br>
+        
+        <b>8. Changes to Terms:</b><br><br>
+        Polymosia reserves the right to update or modify these Terms of Use at any time without prior notice.<br><br>
+        Users are encouraged to review the terms regularly.<br><br>
+        Thank you for using Polymosia. If you have any questions, please contact us at <a href="mailto:affairs@polymosia.com">affairs@polymosia.com</a>.
+        </section>
+    </body>
+
+    <footer>
+        <ul id="Corporate">
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+        <img src="images/TLLC.png" id="Parent" alt="TLLC">
+        <br><br>
+        Timoteo Empire Tower, Manhattan, NY 10001
+        <br><br>
+        All Rights Reserved | © 2023 CLYDE TIMOTEO
+    
+        <div id="address">
+            
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var welcomeDialog = document.getElementById('welcomeDialog');
+            welcomeDialog.showModal();
+        });
+
+        function closeWelcomeDialog() {
+            var welcomeDialog = document.getElementById('welcomeDialog');
+            welcomeDialog.close();
+        }
+
+        function toggleMenu() {
+            var container = document.querySelector('.container');
+            var sideMenu = document.getElementById('sideMenu');
+
+            container.classList.toggle("change");
+
+            if (container.classList.contains("change")) {
+                sideMenu.style.left = "0";
+            } else {
+                sideMenu.style.left = "-250px";
+            }
+        }
+    </script>
+</html>
+

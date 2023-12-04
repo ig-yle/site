@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="corp-styles.css">
+        <link rel="Icon" href="ICON.png">
+        <title> CORPORATE | POLYMOSIA </title>
+        
+    </head>
+
+    <header>
+        <div id="header-content">
+            <a href="corporate.html"><img src="C-POLYMOSIA.png" id="C-POLY"></a>
+        </div>
+
+        <section>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li> <a href="corporate.html"> HOME </a> </li>    
+                <li class="has-submenu">
+                    <a href="#"> WHO ARE WE </a>
+                    <ul class="submenu">
+                        <li> <a href="ourleadership.html" id="OL"> OUR LEADERSHIP </a>
+                        <li> <a href="" id="OS"> OUR STORY </a>
+                        <li> <a href="" id="VV"> VALUES, MISSION AND VISION </a></li>
+                    </ul>
+                </li>
+                <li> <a href="investorrelations.html"> INVESTOR RELATIONS </a> 
+            </ul>
+        </nav>
+        </section>
+    </header>
+
+    <body>
+        <section id="SMR">
+            STOCK INFORMATION
+        </section>
+    </body>
+
+    <footer>
+        <section>
+            <ul id="Corporate">
+                <li> <a href="corporate.html"> Corporate </a> </li> <li> <a href="privacy.html"> Privacy </a> </li> <li> <a href="terms.html"> Terms </a> </li>
+            </ul>
+        </section>
+        <img src="TLLC.png" id="Parent">
+        <br><br>
+        All Rights Reserved | &copy; 2023 CLYDE TIMOTEO      
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+        var header = document.getElementById('header-content');
+        var logo = document.getElementById('C-POLY');
+        var nav = document.querySelector('.C-CC');
+
+        // Add a class to the logo and navigation when scrolled
+        if (window.scrollY > 0) {
+            logo.classList.add('resized');
+            nav.classList.add('resized');
+        } else {
+            logo.classList.remove('resized');
+            nav.classList.remove('resized');
+        }
+
+        // Add a class to the header when scrolled
+        if (window.scrollY > 50) {
+            header.style.height = '50px'; // Set the resized height
+        } else {
+            header.style.height = '100px'; // Set the initial height
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="corp-styles.css">
+        <link rel="Icon" href="ICON.png">
+        <title> CORPORATE | POLYMOSIA </title>
+        
+    </head>
+
+    <header>
+        <div id="header-content">
+            <a href="corporate.html"><img src="C-POLYMOSIA.png" id="C-POLY"></a>
+        </div>
+
+        <section>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li> <a href="corporate.html"> HOME </a> </li>    
+                <li class="has-submenu">
+                    <a href="#"> WHO ARE WE </a>
+                    <ul class="submenu">
+                        <li> <a href="ourleadership.html" id="OL"> OUR LEADERSHIP </a>
+                        <li> <a href="" id="OS"> OUR STORY </a>
+                        <li> <a href="" id="VV"> VALUES, MISSION AND VISION </a></li>
+                    </ul>
+                </li>
+                <li> <a href="investorrelations.html"> INVESTOR RELATIONS </a> 
+            </ul>
+        </nav>
+        </section>
+    </header>
+        
+
+    <body>
+        <section id="sec2">
+            
+            <h2> Meet Our Leadership Team at Polymosia </h2>
+            At Polymosia, our journey is steered by a diverse and dynamic leadership team, united by a shared vision and a commitment to excellence. Get to know the individuals who are driving innovation, shaping strategies, and leading us towards a future of endless possibilities:
+            <br>
+            <br>
+            <h2> CLYDE TIMOTEO, Chief Executive Officer </h2>
+            Bringing a wealth of experience and a visionary outlook, Clyde Timoteo leads the charge at Polymosia. With a track record of steering companies through transformative periods, Clyde Timoteo is the guiding force behind our commitment to versatility and innovation.
+            <br><br>
+            <h3> [COO's Name], Chief Operating Officer </h3>
+            Responsible for the day-to-day operations, [COO's Name] ensures that Polymosia operates seamlessly. With a keen eye for efficiency and a passion for streamlining processes, [COO's Name] is integral to our commitment to excellence.
+            <br><br>
+            <h3> [CTO's Name], Chief Technology Officer </h3>
+            In the fast-paced world of technology, [CTO's Name] is our innovation maestro. With a proven track record of spearheading technological advancements, [CTO's Name] is at the forefront of keeping Polymosia on the cutting edge.
+            <br><br>
+            <h3> [CMO's Name], Chief Marketing Officer </h3>
+            Responsible for shaping the Polymosia brand, [CMO's Name] is the creative mind behind our marketing strategies. [CMO's Name] ensures that our message of versatility and innovation resonates with our global audience.
+            <br><br>
+            <h3> [CFO's Name], Chief Financial Officer </h3>
+            Ensuring the financial health of Polymosia, [CFO's Name] brings financial acumen and strategic insight. [CFO's Name] plays a pivotal role in sustaining our growth and stability.
+            <br><br>
+            <h3> [CSO's Name], Chief Sustainability Officer </h3>
+            At the heart of our commitment to environmental responsibility, [CSO's Name] leads our sustainability initiatives. [CSO's Name] ensures that Polymosia operates with a mindful and responsible approach to the planet.
+            <br><br>
+            <h3> [CHRO's Name], Chief Human Resources Officer </h3>
+            Our people are our strength, and [CHRO's Name] is the advocate for our team. [CHRO's Name] ensures that Polymosia remains a dynamic and inclusive workplace, fostering growth and innovation.
+            <br><br>
+            Together, our leadership team at Polymosia combines expertise, vision, and passion to shape a corporate culture that embodies versatility, innovation, and excellence.
+        </section>
+    </body>
+
+    <footer>
+        <section>
+            <ul id="Corporate">
+                <li> <a href="corporate.html"> Corporate </a> </li> <li> <a href="privacy.html"> Privacy </a> </li> <li> <a href="terms.html"> Terms </a> </li>
+            </ul>
+        </section>
+        <img src="TLLC.png" id="Parent">
+        <br><br>
+        All Rights Reserved | &copy; 2023 CLYDE TIMOTEO      
+    </footer>
+
+    <script>
+            window.addEventListener('scroll', function () {
+            var header = document.getElementById('header-content');
+            var logo = document.getElementById('C-POLY');
+            var nav = document.querySelector('.C-CC');
+
+            // Add a class to the logo and navigation when scrolled
+            if (window.scrollY > 0) {
+                logo.classList.add('resized');
+                nav.classList.add('resized');
+            } else {
+                logo.classList.remove('resized');
+                nav.classList.remove('resized');
+            }
+
+            // Add a class to the header when scrolled
+            if (window.scrollY > 50) {
+                header.style.height = '50px'; // Set the resized height
+            } else {
+                header.style.height = '100px'; // Set the initial height
+            }
+        });
+    </script>
+
+</html>
